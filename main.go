@@ -21,7 +21,7 @@ func httpRoutes() {
 func setupRpcs() {
 	container := svc.NewRpcContainer()
 
-	container.AddFunction("get-weather", rpcs.GetWeather).
+	container.AddFunction(rpcs.GetWeatherKey, rpcs.GetWeather).
 		BodyType(rpcs.GetWeatherRequest{}).
 		Meta("hi", "fred")
 

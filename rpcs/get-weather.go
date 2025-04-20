@@ -15,6 +15,8 @@ type GetWeatherResponse struct {
 	Weather string `json:"weather"`
 }
 
+const GetWeatherKey string = "get-weather"
+
 func GetWeather(w http.ResponseWriter, r *http.Request) {
 	body, err := svc.ReadJson[GetWeatherRequest](r)
 	if err != nil {
